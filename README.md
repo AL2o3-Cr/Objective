@@ -47,7 +47,7 @@ name=[byte]
 :DeclFromFile
 from 0!from0 as 0!name0;
 from=FilePuth,=FromModules
-name=[8bit]
+name=[byte]
 :DeclFromFile
 ```
 ```
@@ -59,7 +59,6 @@ name=[8bit]
 ### Классы :
 * `uj`
 * `arr` - индексированый набор конечных данных
-* `dict`
 * `bit`
 * `byte`
 * `count`
