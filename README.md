@@ -1,9 +1,7 @@
 <meta charset="UTF-8">
 <meta lang="RU">
 
-<!--<button style="position: fixed; right: 5%" onclick=""><span style="font-size: 170%">&uArr;</span></button>-->
-
-# Интерпретатор-UniJect
+# Язык UniJect
 
 Самое важное - это изменение синтаксиса прямо в процессе выполнения программы
 
