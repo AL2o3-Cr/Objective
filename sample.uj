@@ -1,0 +1,10 @@
+file sample
+{
+str.new("data") as d;
+uj myObj
+{
+  code call()
+  {sga Sys.Console.WriteLine(sla (ga 1).d);
+}
+code sample(){sla (la 0).myObj.call();}
+}
