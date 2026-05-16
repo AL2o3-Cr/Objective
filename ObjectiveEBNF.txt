@@ -1,0 +1,27 @@
+letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".
+digit = "0123456789".
+cr  = '\r'.
+lf  = '\n'.
+tab = '\t'.
+
+number = digit {digit}.
+bit = "0" | "1".
+byte = ("8b" bit bit bit bit bit bit bit bit) | ((bit digit digit) | ("2" "01235" "012345")).
+word = letter letter {letter}.
+hex = "0x" "0123456789ABCDEFabcdef".
+pj = {bit} | {letter} | {digit} | {hex} | [pj].
+Addr = ("ga" addr) | ("la" addr) | addr.
+addr = ":" (word | byte) [{"." (word | byte)}].
+simpleAddr = byte ["." simpleAddr].
+
+objective = "{" ( (generalDecl [{generalDecl}]) | opening ) "}".
+generalDecl = obj (word | byte) [opening] ";".
+opening = "{" ( (generalDecl [{generalDecl}]) | ej) "}".
+
+
+ej = {expr}.
+expr = (obj use) | decl ";".
+use = "(" [obj {"," obj}] ")".
+decl = Addr Addr "=" (pj | use | obj).
+
+obj = opening | Addr.
