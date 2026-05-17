@@ -1,6 +1,6 @@
 file sample
 {
-str.new("data") as d;
+pj d{str;data;}
 uj myObj
 {
   code call()
