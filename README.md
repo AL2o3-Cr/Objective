@@ -1,6 +1,6 @@
 # The Objective language is composed entirely of objects.
 
-File extensions:
+## File extensions:
 * .oj (ObJect)
 * .uj (Universal obJect)
 * .ej (Executable obJect)
